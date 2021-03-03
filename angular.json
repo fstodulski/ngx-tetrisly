@@ -3,5 +3,47 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-  }
+    "@kamieniu/ngx-tetrisly": {
+      "projectType": "library",
+      "root": "projects/kamieniu/ngx-tetrisly",
+      "sourceRoot": "projects/kamieniu/ngx-tetrisly/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "tsConfig": "projects/kamieniu/ngx-tetrisly/tsconfig.lib.json",
+            "project": "projects/kamieniu/ngx-tetrisly/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/kamieniu/ngx-tetrisly/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/kamieniu/ngx-tetrisly/src/test.ts",
+            "tsConfig": "projects/kamieniu/ngx-tetrisly/tsconfig.spec.json",
+            "karmaConfig": "projects/kamieniu/ngx-tetrisly/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/kamieniu/ngx-tetrisly/tsconfig.lib.json",
+              "projects/kamieniu/ngx-tetrisly/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**"]
+          }
+        }
+      }
+    }
+  },
+  "cli": {
+    "analytics": "adf06068-084e-4100-977d-658362c0e010"
+  },
+  "defaultProject": "@kamieniu/ngx-tetrisly"
 }

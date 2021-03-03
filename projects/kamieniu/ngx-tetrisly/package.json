@@ -1,0 +1,28 @@
+{
+  "name": "@kamieniu/ngx-tetrisly",
+  "version": "1.0.0",
+  "peerDependencies": {
+    "@angular/common": "^11.0.9",
+    "@angular/core": "^11.0.9"
+  },
+  "dependencies": {
+    "tslib": "^2.0.0"
+  },
+  "keywords": [
+    "angular",
+    "angular 2",
+    "ngx-tetrisly"
+  ],
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "bugs": {
+    "url": "https://github.com/Kamieniu/ngx-tetrisly/issue"
+  },
+  "homepage": "https://github.com/Kamieniu/ngx-tetrisly#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Kamieniu/ngx-tetrisly"
+  }
+}
